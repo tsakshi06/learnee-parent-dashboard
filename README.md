@@ -1,41 +1,62 @@
-<<<<<<< HEAD
-# learnee-parent-dashboard
-Parent course discovery platform with authentication, search, filters, sorting and pagination using Next.js &amp; TypeScript.
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learniee - Parent Dashboard
 
-## Getting Started
+A responsive parent dashboard and course discovery platform built as a frontend/backend assessment for Learniee.
 
-First, run the development server:
+## What I Built
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Learniee allows parents to create an account, log in, view their dashboard, and search for courses for their children.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Parent signup and login
+- Password hashing using bcrypt
+- JWT-based authentication
+- HTTP-only authentication cookie
+- Protected dashboard experience
+- Logged-in user information
+- Course search by name and subject
+- Grade filtering
+- Subject filtering
+- Price range filtering
+- Teacher rating filtering
+- Combinable filters
+- Course sorting by price and rating
+- Pagination
+- No-results state
+- Responsive UI for desktop and mobile
+- Logout functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Node.js
+- bcrypt
+- jose / JWT
+- JSON data storage
 
-To learn more about Next.js, take a look at the following resources:
+## Data Storage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For this assessment version, user data is stored locally in:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`data/users.json`
 
-## Deploy on Vercel
+Course data is stored in:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`lib/courses.ts`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 26bf2cb (Initial commit from Create Next App)
+### Example user row
+
+```json
+{
+  "id": "example-user-id",
+  "name": "Priya Sharma",
+  "email": "priya@example.com",
+  "password": "$2b$10$example-hashed-password"
+}
+
+<img width="1029" height="640" alt="l3" src="https://github.com/user-attachments/assets/4f2f33a2-8b44-436f-8865-1743ca474538" />
+<img width="811" height="473" alt="l2" src="https://github.com/user-attachments/assets/eb090c90-65fa-4d3e-b9b6-0fcb94a13448" />
+<img width="810" height="548" alt="l1" src="https://github.com/user-attachments/assets/4fcd2367-d3da-4171-befb-6d022b29da3c" />
